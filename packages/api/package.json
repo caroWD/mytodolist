@@ -6,22 +6,28 @@
   "private": true,
   "scripts": {
     "dev": "bun --watch index.ts",
-    "format": "prettier --write \"**/*.{ts,tsx}\""
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "drizzle:push": "bunx drizzle-kit push --config=src/config/drizzle.config.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6"
+    "@types/express": "^5.0.6",
+    "drizzle-kit": "^1.0.0-rc.4",
+    "tsx": "^4.23.1"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.4",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
+    "drizzle-orm": "^1.0.0-rc.4",
     "express": "^5.2.1",
+    "mysql2": "^3.23.1",
     "temporal-polyfill": "^1.0.1"
   }
 }

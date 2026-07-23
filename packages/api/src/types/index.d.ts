@@ -11,6 +11,17 @@ declare module 'bun' {
     NODE_ENV?: 'development' | 'production'
     PORT?: number
     ACCEPTED_ORIGINS?: string
+    DB_DIALECT?:
+      | 'postgresql'
+      | 'mysql'
+      | 'sqlite'
+      | 'turso'
+      | 'singlestore'
+      | 'mssql'
+      | 'cockroach'
+      | 'duckdb'
+    DB_SQLITE_FILE_NAME?: string
+    DB_MYSQL_DATABASE_URL?: string
   }
 }
 
