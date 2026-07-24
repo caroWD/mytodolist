@@ -5,6 +5,7 @@ import type {
   baseSelectSchema,
   idRequestSchema,
 } from '../modules'
+import type { rolePermissionRequestSchema } from '../modules'
 
 declare module 'bun' {
   interface Env {
@@ -32,6 +33,8 @@ export type BaseInsert = z.infer<typeof baseInsertSchema>
 export type BaseRequest = z.infer<typeof baseRequestSchema>
 
 export type IdRequest = z.infer<typeof idRequestSchema>
+
+export type RolePermissionRequest = z.infer<typeof rolePermissionRequestSchema>
 
 export type AuthResponse = {
   message: string
