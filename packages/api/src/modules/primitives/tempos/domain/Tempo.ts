@@ -7,16 +7,16 @@ import type {
 export abstract class Tempo {
   private _createdAt: TempoCreatedAt
   private _updatedAt: TempoUpdatedAt
-  private _archivedAt: TempoDeletedAt
+  private _deletedAt: TempoDeletedAt
 
   constructor(
     createdAt: TempoCreatedAt,
     updatedAt: TempoUpdatedAt,
-    archivedAt: TempoDeletedAt
+    deletedAt: TempoDeletedAt
   ) {
     this._createdAt = createdAt
     this._updatedAt = updatedAt
-    this._archivedAt = archivedAt
+    this._deletedAt = deletedAt
   }
 
   get createdAt(): TempoCreatedAt {
@@ -27,7 +27,7 @@ export abstract class Tempo {
     return this._updatedAt
   }
 
-  get archivedAt(): TempoDeletedAt {
-    return this._archivedAt
+  get deletedAt(): TempoDeletedAt {
+    return this._deletedAt
   }
 }
