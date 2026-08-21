@@ -1,0 +1,30 @@
+{
+  "name": "@mytodolist/api",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun run build.ts",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "morgan": "^1.11.0",
+    "zod": "catalog:"
+  }
+}

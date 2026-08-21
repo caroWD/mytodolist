@@ -1,0 +1,50 @@
+{
+  "name": "mytodolist",
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/cz-commitlint": "^21.2.2",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^2.0.1",
+    "@types/bun": "latest",
+    "commitizen": "^4.3.2",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.11.0",
+    "inquirer": "9",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.67.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "scripts": {
+    "commit": "git-cz",
+    "dev": "bun --filter \"**\" dev",
+    "dev:api": "bun --filter \"@mytodolist/api\" dev",
+    "dev:app": "bun --filter \"@mytodolist/app\" dev",
+    "dev:web": "bun --filter \"@mytodolist/web\" dev",
+    "build": "bun --filter \"**\" build",
+    "build:api": "bun --filter \"@mytodolist/api\" build",
+    "build:app": "bun --filter \"@mytodolist/app\" build",
+    "build:web": "bun --filter \"@mytodolist/web\" build"
+  },
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "^4.4.3"
+    }
+  }
+}
